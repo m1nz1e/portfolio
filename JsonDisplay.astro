@@ -1,0 +1,37 @@
+---
+// src/components/JsonDisplay.astro
+
+import jsonData from '../data.json'; // Import your cleaned JSON data
+
+const { name, compatibility_date, assets } = jsonData;
+---
+
+<div class="json-display">
+  <h1>JSON Data</h1>
+  <p><strong>Name:</strong> {name}</p>
+  <p><strong>Compatibility Date:</strong> {compatibility_date}</p>
+  <div>
+    <h2>Assets</h2>
+    <p><strong>Directory:</strong> {assets.directory}</p>
+  </div>
+</div>
+
+<style>
+.json-display {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+</style>
